@@ -13,7 +13,7 @@ df["datetime"] = pd.to_datetime(df["publicationDate"], format="%Y%m%d")
 df["year"] = df["datetime"].dt.year
 # counts_df = df.groupby(["year", "source"]).size().reset_index(name="count")
 
-fig, ax = plt.subplots(figsize=(10, 5))
+fig, ax = plt.subplots(figsize=(7, 4))
 sns.countplot(data=df, x="year")
 
 labels = ax.get_xticklabels()
